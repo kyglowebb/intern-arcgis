@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Esri Map</title>
+		<style></style>
+        <!-- MUST include dojo configuration before other js and css -->
+		<script type="text/javascript">
+			var pathRoot = location.pathname.replace(/\/[^/]+$/, "");
+			var dojoConfig = {
+				paths: {
+					"scripts": pathRoot + "/scripts"
+				}
+			};
+		</script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://js.arcgis.com/4.5/"></script>
+		<script src="scripts/init.js"></script>
+
+    </head>
+	<body>
+		<div class="container fill-height fill-width">
+			<div class="row fill-height">
+				<div class="col-lg-4">
+					<h1>ArcGIS JS</h1>
+				</div>
+				<div class="col-lg-8 fill-height">
+					<div id="viewDiv">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
