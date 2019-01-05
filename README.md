@@ -1,6 +1,11 @@
 # mentee-arcgis
 ## Evan ##
 
+Run `npm install` to load all node dependencies
+
+Run `npm run server` to run http server
+
+
 Create a travel guide for the US, providing visual information for at least 5 cities. Utilize the ArcGIS map instance to display geographical information and the left panel as a canvas to display buttons for interacting with the map, such as zooming the map to a given city.
 
 ----------

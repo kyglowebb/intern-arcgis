@@ -1,10 +1,13 @@
 require([
 	"scripts/mapView",
-	
-	"dojo/domReady!"
+
+	"dojo/domReady!",
+
 ],
 function(
-	mapView
+	mapView,
+	
 ){
 	//main entry point into project
+
 });

@@ -17,22 +17,82 @@
 		<link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css">
 		<link rel="stylesheet" href="css/main.css">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://js.arcgis.com/4.5/"></script>
 		<script src="scripts/init.js"></script>
+		<script src="scripts/buttonFunctions.js"></script>
 
     </head>
 	<body>
 		<div class="container fill-height fill-width">
 			<div class="row fill-height">
-				<div class="col-lg-4">
-					<h1>ArcGIS JS</h1>
+				<div id="frontPage" class="col-lg-4" style="text-align:center;">
+					<h1 id="frontTitle">Top Military Museums in the United States</h1>
+					<button id="btn1" class="button" style="vertical-align:middle"><span>Marine Corps</span></button>
+					<button id="btn2" class="button" style="vertical-align:middle"><span>WWII Museum</span></button>
+					<button id="btn3" class="button" style="vertical-align:middle"><span>Naval Aviation</span></button>
+					<button id="btn4" class="button" style="vertical-align:middle"><span>U.S. Air Force</span></button>
+					<button id="btn5" class="button" style="vertical-align:middle"><span>USS Midway</span></button>
+				</div>
+				<div id= "Museum1Info" class="col-lg-4">
+					<h2>National Museum of the Marine Corps</h2>
+					<p>The National Museum of the Marine Corps opened in 2006 as a monument to 'Honor, Courage & Commitment'
+						of our nation's Marines. The museum features many armed conflicts in which many Marines served in, 
+						dating all the way back to the creation of the Marine Corps during the American Revoltion. They are 
+						currently expanding the museum to include new exhibits that will open in phases through the year 2022.
+					</p>
+					<h4>Website:<br><a href="https://www.usmcmuseum.com/" target="_blank">Addition Information/Purchase Tickets</a></h4>
+					<h4>Directions:<br><a href="https://tinyurl.com/yao3a2d3" target="_blank">Address and Mapping Directions</a></h4>
+					<button id="backToFrontPage1">Back</button>
+				</div>
+				<div id= "Museum2Info" class="col-lg-4">
+					<h2>The National WWII Museum</h2>
+					<p>The National WWII Museum, formerly known as The National D-Day Museum, is a military history museum 
+						located in New Orleans, Louisiana. It was opened on the 56th anniversary of D-Day as a tribute and 
+						rememberance to all those who served in WWII. One exciting feature of this museum is the opportunity to
+						ride a PT-305; an armed naval vessile used by the Americans in a multitude of sea operations in the later
+						years of the war.
+					</p>
+					<h4>Website:<br><a href="https://www.nationalww2museum.org/" target="_blank">Addition Information/Purchase Tickets</a></h4>
+					<h4>Directions:<br><a href="https://tinyurl.com/y9yee3cc" target="_blank">Address and Mapping Directions</a></h4>
+					<button id="backToFrontPage2">Back</button>
+				</div>
+				<div id= "Museum3Info" class="col-lg-4">
+					<h2>National Naval Aviation Museum</h2>
+					<p>The National Naval Aviation Museum is the world’s largest Naval Aviation museum and one of the most-visited
+						museums in the state of Florida. The museum features more than 150 restored aircraft representing Navy, 
+						Marine Corps, and Coast Guard Aviation. One of the museum's exciting attractions are 3D Flight Simulators.
+						In the flight simulator pod, you can experience everything from flight control to simulated pitches and rolls.
+					</p>
+					<h4>Website:<br><a href="https://www.navalaviationmuseum.org/" target="_blank">Addition Information/Purchase Tickets</a></h4>
+					<h4>Directions:<br><a href="https://tinyurl.com/yd7z69hr" target="_blank">Address and Mapping Directions</a></h4>
+					<button id="backToFrontPage3">Back</button>
+				</div>
+				<div id= "Museum4Info" class="col-lg-4">
+					<h2>National Museum of the United States Air Force</h2>
+					<p>The National Museum of the United States Air Force is the official museum of the United States Air Force located
+						at Wright-Patterson Air Force Base. The NMUSAF is the oldest and largest military aviation museum in the world, 
+						with more than 360 aircraft and missiles on display.
+					</p>
+					<h4>Website:<br><a href="https://www.nationalmuseum.af.mil/" target="_blank">Addition Information/Purchase Tickets</a></h4>
+					<h4>Directions:<br><a href="https://tinyurl.com/ycqbf6ut" target="_blank">Address and Mapping Directions</a></h4>
+					<button id="backToFrontPage4">Back</button>
+				</div>
+				<div id= "Museum5Info" class="col-lg-4">
+					<h2>USS Midway Museum</h2>
+					<p>The USS Midway Museum is a maritime museum located in downtown San Diego at Navy Pier. The ship houses an 
+						extensive collection of aircraft, many of which were built in Southern California. Upon boarding the museum,
+						you will be able to visit nearly all levels of the ship, ranging from the flight deck to the captain's 
+						quarters. See how a aircraft carrier operats and its crew lives all at the USS Midway Museum.
+					</p>
+					<h4>Website:<br><a href="https://www.midway.org/" target="_blank">Addition Information/Purchase Tickets</a></h4>
+					<h4>Directions:<br><a href="https://tinyurl.com/y7enf3fk" target="_blank">Address and Mapping Directions</a></h4>
+					<button id="backToFrontPage5">Back</button>
 				</div>
 				<div class="col-lg-8 fill-height">
-					<div id="viewDiv">
-					
-					</div>
+					<div id="viewDiv"></div>
 				</div>
 			</div>
 		</div>
