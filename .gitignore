@@ -1,0 +1,4 @@
+.project
+.settings/
+*DS_STORE*
+node_modules
