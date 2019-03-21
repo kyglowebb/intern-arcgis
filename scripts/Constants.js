@@ -4,5 +4,6 @@ define(function () {
 	var Constants = {
 		MAP_VIEW_DIV_ID: MAP_VIEW_DIV_ID
 	}
+
 	return Constants;
 });

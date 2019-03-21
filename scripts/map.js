@@ -1,6 +1,6 @@
 define(["esri/Map"], function (Map) {
   var mapProperties = {
-    basemap: "dark-gray"
+    basemap: "terrain"
   };
 
   var map = new Map(mapProperties);
