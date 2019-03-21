@@ -4,7 +4,7 @@ define(["scripts/Constants",
   "esri/renderers/SimpleRenderer",
   "esri/layers/CSVLayer",
   //"esri/layers/FeatureLayer",
-  "esri/widgets/Search"
+  "esri/widgets/Search",
 ],
   function (
     Constants,
@@ -14,7 +14,6 @@ define(["scripts/Constants",
     FeatureLayer,
     Search
   ) {
-
     var viewProperties = {
       map: map,
       container: Constants.MAP_VIEW_DIV_ID,
@@ -40,12 +39,13 @@ define(["scripts/Constants",
       }
     };
     var template = {
-      title: "{ID}",
-      content: "{description}"
+      title: "{Name} National Park",
+      content: "{NPS_URL}",
     }
 
     var citiesLayer = new FeatureLayer({
-      url: "./citiesLayer.csv",
+      //url: "./citiesLayer.csv",
+      url: "./nps_parks.csv",
       popupTemplate: template,
       renderer: citiesRenderer
     });
@@ -55,5 +55,6 @@ define(["scripts/Constants",
     }), "top-right");
 
     map.add(citiesLayer);
+
     return view;
   });
