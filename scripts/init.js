@@ -1,9 +1,11 @@
 require([
 	"scripts/mapView",
+	"scripts/buttons",
 	"dojo/domReady!"
 ],
 	function (
-		mapView
+		mapView,
+		buttons
 	) {
 		console.log("Taco Stands!!")
 	});

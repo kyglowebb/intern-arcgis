@@ -52,7 +52,7 @@ define(["scripts/Constants",
 
     view.ui.add(new Search({
       view: view
-    }), "top-right");
+    }), "top-right", "padding: 20px");
 
     map.add(citiesLayer);
 
