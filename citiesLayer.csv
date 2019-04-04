@@ -1,3 +1,10 @@
-﻿ID,Latitude,Longitude,description
-Yosemite,37.8651,-119.5383,Awesome Place
-Joshua Tree,33.8734,-115.901,Desert Tree
+﻿Name,Longitude,Latitude,description,image
+Yosemite,-119.5383,37.8651,Awesome Place,https://png.pngtree.com/png_detail/18/09/10/pngtree-yosemite-national-park-seven-png-clipart_748474.jpg
+Joshua Tree,-115.901,33.8734,Desert Tree,https://www.nps.gov/jotr/learn/nature/images/JoshuaTrees_LMcAfee.jpg?maxwidth=1200&maxheight=1200&autorotate=false
+The Grand Canyon,-112.132706,35.960503,Deep Crack,https://travel.home.sndimg.com/content/dam/images/travel/fullset/2012/03/26/8b/grand-canyon-national-park.rend.hgtvcom.616.462.suffix/1491580896674.jpeg
+Sequoia National Park,-118.82517,36.49073,Big Trees,https://www.travelcaffeine.com/wp-content/uploads/2017/03/sequoia-national-park-trees-upward-sunburst-fisheye.jpg
+Denali,-148.9066,63.7314,Cold Mountains,https://i2.wp.com/whalecoastak.org/wp-content/uploads/Alaska-National-Park-Tour.jpg?fit=960%2C640&ssl=1
+LA,-148.9066,63.7314,not a national park,
+Death Valley,,,,
+Yellow Stone,,,,
+Superior National Forest,,,,

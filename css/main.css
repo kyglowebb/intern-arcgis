@@ -76,7 +76,8 @@ button {
 	vertical-align: middle;
 }
 
-#myBtn {
+
+myBtn {
   top: 10px;
 	display: none; /* Hidden by default */
 	position: fixed; /* Fixed/sticky position */

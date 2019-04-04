@@ -1,4 +1,5 @@
 define(["scripts/Constants",
+  "scripts/loadData",
   "scripts/map",
   "esri/views/MapView",
   "esri/renderers/SimpleRenderer",
@@ -8,6 +9,7 @@ define(["scripts/Constants",
 ],
   function (
     Constants,
+    loadData,
     map,
     MapView,
     citiesRenderer,
@@ -40,12 +42,12 @@ define(["scripts/Constants",
     };
     var template = {
       title: "{Name} National Park",
-      content: "{NPS_URL}",
+      content: "{description}",
     }
 
     var citiesLayer = new FeatureLayer({
-      //url: "./citiesLayer.csv",
-      url: "./nps_parks.csv",
+      url: "./citiesLayer.csv",
+      //url: "./nps_parks.csv",
       popupTemplate: template,
       renderer: citiesRenderer
     });

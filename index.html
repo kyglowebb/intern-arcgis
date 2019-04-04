@@ -22,8 +22,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://js.arcgis.com/4.10/"></script>
-  <script
-    src="https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=bd7H6Gfpce74mtKyXlHFUmDKSUWzr1UVeLAa5yeS"></script>
 
   <script src="scripts/init.js"></script>
 </head>
@@ -34,61 +32,13 @@
     <div class="row fill-height">
       <div class="col-lg-4 fill-height" style="text-align:center">
         <div class="scrollable" style="overflow: auto">
-          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
           <h1>National Parks</h1>
-          <div class="card">
-            <img
-              src="https://png.pngtree.com/png_detail/18/09/10/pngtree-yosemite-national-park-seven-png-clipart_748474.jpg"
-              alt="Yosemite" style="width: 100%; height: 100%;">
-            <div class="card.container">
-              <h2><b>Yosemite</b></h2>
-              <p>Awesome Place</p>
-              <button class="button" style="vertical-align:middle"><span>Click For More Info</span></button>
-            </div>
-          </div>
-          <div class="card">
-            <button id="btn1" class="button"">
-              <img
-                src="
-              https://www.nps.gov/jotr/learn/nature/images/JoshuaTrees_LMcAfee.jpg?maxwidth=1200&maxheight=1200&autorotate=false"
-              alt="J Tree" style="width: 100%; height: 100%;">
-              <div class="card.container">
-                <h2><b>J Tree</b></h2>
-                <p>Awesome Place Numero Dos</p>
-            </button>
-          </div>
-          <div class="card">
-            <img
-              src="https://travel.home.sndimg.com/content/dam/images/travel/fullset/2012/03/26/8b/grand-canyon-national-park.rend.hgtvcom.616.462.suffix/1491580896674.jpeg"
-              alt="J Tree" style="width: 100%; height: 100%;">
-            <div class="card.container">
-              <h2><b>The Grand Canyon</b></h2>
-              <p>Fill in Data</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://www.travelcaffeine.com/wp-content/uploads/2017/03/sequoia-national-park-trees-upward-sunburst-fisheye.jpg"
-              alt="J Tree" style="width: 100%; height: 100%;">
-            <div class="card.container">
-              <h2><b>Sequoia National Park</b></h2>
-              <p>Big Tree Land</p>
-            </div>
-          </div>
-          <div class="card">
-            <img
-              src="https://i2.wp.com/whalecoastak.org/wp-content/uploads/Alaska-National-Park-Tour.jpg?fit=960%2C640&ssl=1"
-              alt="J Tree" style="width: 100%; height: 100%;">
-            <div class="card.container">
-              <h2><b>Denali</b></h2>
-              <p>Cold Mountains</p>
-            </div>
-          </div>
+          <div id="csv_data"></div>
+          <script src="scripts/loadData.js"></script>
         </div>
-        <button id="back" class="button" style="vertical-align:middle"><span>Scroll Test</span></button>
+        <button id="back" class="myBtn">ZOOM OUT</button>
       </div>
-      <div class="col-lg-8 fill-height">
-
+      <div class=" col-lg-8 fill-height">
         <div id="viewDiv"></div>
       </div>
     </div>
