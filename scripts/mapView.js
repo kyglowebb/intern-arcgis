@@ -1,19 +1,16 @@
 define(["scripts/Constants",
-  "scripts/loadData",
   "scripts/map",
   "esri/views/MapView",
   "esri/renderers/SimpleRenderer",
   "esri/layers/CSVLayer",
-  //"esri/layers/FeatureLayer",
   "esri/widgets/Search",
 ],
   function (
     Constants,
-    loadData,
     map,
     MapView,
     citiesRenderer,
-    FeatureLayer,
+    CSVLayer,
     Search
   ) {
     var viewProperties = {
@@ -45,9 +42,8 @@ define(["scripts/Constants",
       content: "{description}",
     }
 
-    var citiesLayer = new FeatureLayer({
+    var citiesLayer = new CSVLayer({
       url: "./citiesLayer.csv",
-      //url: "./nps_parks.csv",
       popupTemplate: template,
       renderer: citiesRenderer
     });

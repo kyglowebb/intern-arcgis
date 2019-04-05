@@ -1,5 +1,8 @@
-var csvUrl = "./citiesLayer.csv";
+require([
+    "./citiesLayer.csv"
+])
 
+var csvUrl = "./citiesLayer.csv";
 
 function handleCSVResult(csvString) {
     // Get the div element to append the data to
@@ -10,14 +13,14 @@ function handleCSVResult(csvString) {
 
     var htmlStr = '';
 
-    // Iterate over each row
-    for (var i = 1; i < rows.length; i++) { //this ar
+    // Iterate over each row starting at 1 to skip title
+    for (var i = 1; i < rows.length; i++) {
         var row = rows[i];
 
         // split row to cells
         var cells = row.split(',');
 
-        // Extract data from cell 1 and 2 of current row
+        // Extract data from cell
         var ID = cells[0];
         var latitude = cells[1];
         var longitute = cells[2];
@@ -35,6 +38,7 @@ function handleCSVResult(csvString) {
         htmlStr += '<p>' + description + '</p></button></div>';
     }
     dataArea.innerHTML = htmlStr;
+    console.log("Load data from CSV");
 }
 
 function view(latitude, longitute) {
