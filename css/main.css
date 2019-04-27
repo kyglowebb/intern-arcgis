@@ -60,8 +60,8 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 }
 
 button {
-	background-color: Transparent;
-	background-repeat:no-repeat;
+	/*background-color: Transparent;*/
+	background-repeat:no-repeat; 
 	border: none;
 	cursor:pointer;
 	overflow: hidden;
@@ -69,26 +69,18 @@ button {
 	vertical-align: middle;
 }
 
-
-myBtn {
-  top: 10px;
-	display: none; /* Hidden by default */
-	position: fixed; /* Fixed/sticky position */
-	bottom: 10px; /* Place the button at the bottom of the page */
-	right: 30px; /* Place the button 30px from the right */
-	z-index: 99; /* Make sure it does not overlap */
+.myBtn {
+	width: 50%;
+	bottom: 1%;
 	border: none; /* Remove borders */
-	outline: none; /* Remove outline */
-	background-color: blue; /* Set a background color */
-	color: rgb(121, 10, 10); /* Text color */
+	background-color: lightgrey; /* Set a background color */
+	color: rgb(0, 0, 0); /* Text color */
 	cursor: pointer; /* Add a mouse pointer on hover */
-	padding: 15px; /* Some padding */
 	border-radius: 10px; /* Rounded corners */
-	font-size: 18px; /* Increase font size */
+	font-size: 16px; /* Increase font size */
   }
   
-  #myBtn:hover {
-	background-color: rgba(255, 99, 71, 0); /* Add a dark-grey background on hover */
-  }
-
-
+  .myBtn:hover {
+	background-color: darkgrey; /* Add a dark-grey background on hover */
+	}
+	
