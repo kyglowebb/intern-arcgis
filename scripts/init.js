@@ -9,7 +9,7 @@ require([
 		loadData,
 		buttons
 	) {
-		console.log("Taco Stands!!")
+		console.log("Init Complete")
 	});
 
 
