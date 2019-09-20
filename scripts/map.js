@@ -6,7 +6,8 @@ function(
 ){
 	
 	var mapProperties = {
-	    basemap : 'gray',
+		basemap : 'gray',
+		
     };
 	
 	var map = new Map(mapProperties);
