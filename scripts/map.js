@@ -6,9 +6,8 @@ function(
 ){
 	
 	var mapProperties = {
-		basemap : 'gray',
-		
-    };
+		basemap : 'topo',
+	};
 	
 	var map = new Map(mapProperties);
 	return map;

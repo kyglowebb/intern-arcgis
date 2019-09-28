@@ -9,12 +9,13 @@ define([
 function(
 	Constants, map,
 	MapView,
-	FeatureLayer // I added server-side and client-side SQL filters
+	FeatureLayer // I added in order to implment server-side and client-side SQL filters
 ){
 	
 	var viewProperties = {
 		map: map,
 		container: Constants.MAP_VIEW_DIV_ID
+	
 	}
 	var view = new MapView(viewProperties);
 	return view;

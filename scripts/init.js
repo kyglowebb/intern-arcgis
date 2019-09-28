@@ -6,5 +6,6 @@ require([
 function(
 	mapView
 ){
-	//main entry point into project
+	
+	
 });
