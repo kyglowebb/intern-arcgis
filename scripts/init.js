@@ -7,7 +7,9 @@ require([
 	"dojo/domReady!",
 	// added these to put in feature layer because I guess this is where the layers go?
 	"esri/layers/FeatureLayer",
-	"esri/layers/CSVLayer"  // Perhaps I don't need this because it will be done through Feature Layer?
+	"esri/layers/CSVLayer",  // Perhaps I don't need this because it will be done through Feature Layer?
+	"esri/config" 
+
 ],
 function(                     // my guess is init is where you put your main functions?
 	mapView,
@@ -15,8 +17,11 @@ function(                     // my guess is init is where you put your main fun
     popupProfile,
 	arcgisUtils,
 	FeatureLayer,
-	CSVLayer               // Create a featureLayer & add a rest endpoint of the restaurants
+	CSVLayer,               // Create a featureLayer & add a rest endpoint of the restaurants
+	esriConfig
 ){
+
+	esriConfig.request.proxyUrl = "/resource-proxy/Java/proxy.jsp";
 
 	var restaurant = new FeatureLayer ({
 		url:"https://services3.arcgis.com/GVgbJbqm8hXASVYi/ArcGIS/rest/services/Routes_to_Restaurants_(Points)/FeatureServer/0"
