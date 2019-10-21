@@ -6,14 +6,16 @@ require([
 	"esri/arcgis/utils",
 	"dojo/domReady!",
 	// added these to put in feature layer because I guess this is where the layers go?
-	"esri/layers/FeatureLayer"
+	"esri/layers/FeatureLayer",
+	"esri/layers/CSVLayer"  // Perhaps I don't need this because it will be done through Feature Layer?
 ],
 function(                     // my guess is init is where you put your main functions?
 	mapView,
 	PopupTemplate,
     popupProfile,
 	arcgisUtils,
-	FeatureLayer               // Create a featureLayer & add a rest endpoint of the restaurants
+	FeatureLayer,
+	CSVLayer               // Create a featureLayer & add a rest endpoint of the restaurants
 ){
 
 	var restaurant = new FeatureLayer ({
@@ -27,7 +29,9 @@ function(                     // my guess is init is where you put your main fun
 	}
 
 	var displayRestaurants = new FeatureLayer ({ 
-		url: ""
-	})
+		url: "info.csv",
+		outfields: ["city", "state", "name", "longitude", "latitude", "phone"],
+	});
+	map.add(displayRestaurants);
 
 });
