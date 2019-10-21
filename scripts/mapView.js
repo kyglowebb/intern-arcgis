@@ -1,15 +1,14 @@
 define([
 	"scripts/Constants",
 	"scripts/map",
-	
 	"esri/views/MapView",
 	
-	"esri/layers/FeatureLayer", // I added in order to implement server-side and client-side SQL filters
+	"esri/layers/FeatureLayer", 
 ],
 function(
 	Constants, map,
 	MapView,
-	FeatureLayer // I added in order to implment server-side and client-side SQL filters
+	FeatureLayer // Create a featureLayer & add a rest endpoint of the restaurants
 ){
 	
 	var viewProperties = {

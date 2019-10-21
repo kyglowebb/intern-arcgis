@@ -5,6 +5,9 @@ define([
 function(
 	Map
 ){
+
+// This is where you add the FeatureLayers
+// map.add(trailheadsLayer);
 	
 	var mapProperties = {
 		basemap : 'topo',
