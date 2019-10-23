@@ -11,7 +11,6 @@ function(
 	FeatureLayer,
 	CSVLayer,              
 ){
-	
 	var popupRestaurants = new PopupTemplate ({
 		"title": "{name}",
         "content": "<b>City:</b>{city}<br><b>State:</b>{state}" +
@@ -21,7 +20,7 @@ function(
 
 	var displayRestaurants = new CSVLayer ({ 
 		url: "./info.csv",
-		PopupTemplate: popupRestaurants,
+		popupTemplate: popupRestaurants,
 		outfields: ["city", "state", "name", "latitude", "longitude", "phone"],
 		renderer: {
 			type: "simple",  // autocasts as new SimpleRenderer()
@@ -36,25 +35,5 @@ function(
 			}
 		  }
 	});
-
-	displayRestaurants.renderer = {
-		type: "simple", // autocasts as new SimpleRenderer()
-		symbol: {
-		  type: "point-2d", // autocasts as new PointSymbol3D()
-		  symbolLayers: [
-			{
-			  type: "icon", // autocasts as new IconSymbol3DLayer()
-			  material: { color: [238, 69, 0, 0.75] },
-			  outline: {
-				width: 0.5,
-				color: "white"
-			  },
-			  size: "12px"
-			}
-		  ]
-		}
-	  };
-
 	mapView.map.add(displayRestaurants);
-
 });
