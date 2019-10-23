@@ -1,9 +1,10 @@
 define([
-	"esri/Map"
-	
+	"esri/Map",
+	//"esri/layers/FeatureLayer", // added this cause it said featureLayer not defined
 ],
 function(
-	Map
+	Map,
+	//FeatureLayer,              // added this cause it said featureLayer not defined
 ){
 
 // This is where you add the FeatureLayers
