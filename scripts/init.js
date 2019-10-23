@@ -1,33 +1,32 @@
 require([
-	"scripts/mapView", 	// import mapView
-	// added these below for popup make sure updated csv layer
-	//"esri/PopupTemplate",
-	//"esri/arcadeProfiles/popupProfile",
-	//"esri/arcgis/utils",
-	// added these to put in feature layer because I guess this is where the layers go?
+	"scripts/mapView", 	
+	"esri/PopupTemplate",
 	"esri/layers/FeatureLayer",
-	"esri/layers/CSVLayer",  // Perhaps I don't need this because it will be done through Feature Layer?
+	"esri/layers/CSVLayer",  
 	"dojo/domReady!",
 ],
-function(                     // my guess is init is where you put your main functions?
+function(                     
 	mapView,
-	//PopupTemplate,
-    //popupProfile,
-	//arcgisUtils,
+	PopupTemplate,
 	FeatureLayer,
-	CSVLayer,               // Create a featureLayer & add a rest endpoint of the restaurants
-	
+	CSVLayer,              
 ){
-
-	// var restaurant = new FeatureLayer ({
-	// 	url:"https://services3.arcgis.com/GVgbJbqm8hXASVYi/ArcGIS/rest/services/Routes_to_Restaurants_(Points)/FeatureServer/0"
-	// });
-	// mapView.map.add(restaurant,0);
 	
-	var popupRestaurants = {
-		"title": "{TITLE}",
-		"content": "<b>City:</b> {city}<br> <b>State:</b> {state}<br> <b>Name:</b> {name}<br> <b>Longitutde:</b> {longitude}<br> <b>Latitude:</b> {latitude}<br> <b>Phone Number:</b> {phone}<br>"
-	}
+	var popupRestaurants = new popupTemplate ({
+		url: "./info.csv",
+		"title": "{name}",
+        "content": "<b>City:</b>{city}<br><b>State:</b>{state}" +
+		"<br><b>Name:</b>{name}<br><b>Latitude:</b>{latitude}<br>" +
+		"<b>Longitude:</b>{longitude}<br><b>Phone Number:</b> {phone}<br>"
+      });
+
+      //var feature = new FeatureLayer({
+        //url: "./info.csv",
+        //outFields: ["city", "state", "name", "latitude", "longitude", "phone"],
+        //popupTemplate: popupRestaurants
+      //});
+
+      mapView.map.add(popupRestaurants);
 
 	var displayRestaurants = new CSVLayer ({ 
 		url: "./info.csv",
