@@ -11,6 +11,7 @@ function(
 	
 	var mapProperties = {
 		basemap : 'topo',
+		//layers: [featureLayer],    // added this for the popup
 	};
 	
 	var map = new Map(mapProperties);
