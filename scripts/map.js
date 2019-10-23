@@ -10,7 +10,6 @@ function(
 	
 	var mapProperties = {
 		basemap : 'topo',
-		layers: [displayRestaurants],    // added this for the popup
 	};
 	
 	var map = new Map(mapProperties);

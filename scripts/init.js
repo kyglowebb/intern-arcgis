@@ -57,5 +57,4 @@ function(
 
 	mapView.map.add(displayRestaurants);
 
-
 });
