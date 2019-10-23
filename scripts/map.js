@@ -7,8 +7,6 @@ function(
 	//FeatureLayer,              // added this cause it said featureLayer not defined
 ){
 
-// This is where you add the FeatureLayers
-// map.add(trailheadsLayer);
 	
 	var mapProperties = {
 		basemap : 'topo',
